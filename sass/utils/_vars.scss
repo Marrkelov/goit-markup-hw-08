@@ -1,0 +1,32 @@
+:root {
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+
+  --speed-animation: 250ms;
+  --animation-type: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --primary-color: #757575;
+  --primari-logo-color: #000000;
+  --primari-social-color: #afb1b8;
+  --secondary-social-color: #ffffff;
+  --bold-color: #212121;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --footer-color-contact: rgba(255, 255, 255, 0.6);
+  --modal-border-color: rgba(33, 33, 33, 0.2);
+  --modal-coment-color: rgba(117, 117, 117, 0.5);
+
+  --scry-sc-darck-tm-bg: rgba(255, 255, 255, 0.1);
+  --secondary-bg-color: #2f303a;
+  --commands-bg-color: #f5f4fa;
+  --bg-botton: #f5f4fa;
+  --cards-bg-color: #eeeeee;
+  --prymary-bg-color: #ffffff;
+  --cards-bg-hover-img: rgba(33, 150, 243, 0.9);
+  --header-bottom-border-color: #ececec;
+  --modal-backdrop: rgba(0, 0, 0, 0.2);
+  --doing-text-bg-cards: rgba(47, 48, 58, 0.8);
+
+  --accent-color: #2196f3;
+  --hover-btn: #188ce8;
+}

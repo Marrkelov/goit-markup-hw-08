@@ -1,0 +1,25 @@
+.logo {
+  display: block;
+
+  margin-right: 93px;
+  padding: 24px 0;
+
+  font-family: var(--secondary-font);
+
+  &__web {
+    color: var(--accent-color);
+  }
+
+  &--theme-white {
+    @include font(26px, 700, 31px, var(--primari-logo-color));
+  }
+
+  &--theme-dark {
+    @include font(26px, 700, 31px, var(--white-color));
+  }
+
+  .basement & {
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+}

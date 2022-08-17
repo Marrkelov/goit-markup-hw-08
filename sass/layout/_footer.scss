@@ -1,0 +1,101 @@
+.page-footer {
+  padding: 60px 0;
+
+  background-color: var(--secondary-bg-color);
+
+  .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.form-contact {
+  &__list {
+    font-style: normal;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.form-contact__link {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--white-color);
+
+  transition: color var(--speed-animation) var(--animation-type);
+
+  .form-contact__item &:hover,
+  .form-contact__item &:focus {
+    color: var(--accent-color);
+  }
+
+  .cnt-mail &,
+  .cnt-tel & {
+    font-size: 14px;
+    line-height: 1.71;
+
+    color: var(--footer-color-contact);
+  }
+}
+
+.subscription {
+  margin-left: 93px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: var(--white-color);
+  }
+
+  &-container {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+
+.subscription-form__input {
+  width: 359px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  background-color: transparent;
+  color: var(--footer-color-contact);
+
+  transition: border var(--speed-animation) var(--animation-type);
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--accent-color);
+  }
+
+  &::placeholder {
+    line-height: 1.25;
+
+    color: var(--footer-color-contact);
+  }
+}
+
+.subscription-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  padding: 10px 29px;
+  margin-left: 12px;
+
+  &__svg {
+    margin-left: 10px;
+  }
+}
