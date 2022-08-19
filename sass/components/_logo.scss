@@ -11,11 +11,11 @@
   }
 
   &--theme-white {
-    @include font(26px, 700, 31px, var(--primari-logo-color));
+    @include font(26px, 700, 31px, 0.03em, var(--primari-logo-color));
   }
 
   &--theme-dark {
-    @include font(26px, 700, 31px, var(--white-color));
+    @include font(26px, 700, 31px, 0.03em, var(--white-color));
   }
 
   .basement & {

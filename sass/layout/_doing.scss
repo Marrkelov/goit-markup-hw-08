@@ -19,12 +19,9 @@
     height: 70px;
     padding: 27px 0;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font(14px, 700, 16px, 1.14, var(--white-color));
     text-transform: uppercase;
 
-    color: var(--white-color);
     background-color: var(--doing-text-bg-cards);
   }
 }

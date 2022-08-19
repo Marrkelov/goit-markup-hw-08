@@ -4,26 +4,18 @@
   &__title {
     margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font(14px, 700, 16px, 1.14, var(--white-color));
     text-transform: uppercase;
-
-    color: var(--white-color);
   }
 }
 
 .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
 
   gap: 10px;
 
   &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
 
     width: 44px;
     height: 44px;

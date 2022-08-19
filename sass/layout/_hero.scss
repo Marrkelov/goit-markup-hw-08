@@ -19,13 +19,8 @@
     margin: 0 237px;
     margin-bottom: 30px;
 
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    @include font(44px, 900, 60px, 0.06em, var(--white-color));
     text-transform: uppercase;
-
-    color: var(--white-color);
   }
 
   &__btn {

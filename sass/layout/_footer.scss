@@ -20,10 +20,7 @@
 }
 
 .form-contact__link {
-  font-size: 14px;
-  line-height: 1.71;
-
-  color: var(--white-color);
+  @include font(14px, 400, 24px, 1.71, var(--white-color));
 
   transition: color var(--speed-animation) var(--animation-type);
 
@@ -34,10 +31,7 @@
 
   .cnt-mail &,
   .cnt-tel & {
-    font-size: 14px;
-    line-height: 1.71;
-
-    color: var(--footer-color-contact);
+    @include font(14px, 400, 24px, 1.71, var(--footer-color-contact));
   }
 }
 
@@ -45,12 +39,8 @@
   margin-left: 93px;
 
   &__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font(14px, 700, 16px, 0.03em, var(--white-color));
     text-transform: uppercase;
-
-    color: var(--white-color);
   }
 
   &-container {
@@ -88,9 +78,7 @@
 }
 
 .subscription-btn {
-  display: flex;
-  align-items: center;
-  text-align: center;
+  @extend %flex-center;
 
   padding: 10px 29px;
   margin-left: 12px;

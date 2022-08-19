@@ -16,11 +16,7 @@
   &__header {
     margin-bottom: 12px;
 
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-
-    color: var(--bold-color);
+    @include font(20px, 700, 23px, 0.03em, var(--bold-color));
   }
 }
 
@@ -41,9 +37,7 @@
   }
 
   &__title {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include font(12px, 400, 14px, 0.01em, inherit);
   }
 
   &__icon {
@@ -98,23 +92,16 @@
   }
 
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-
-    color: var(--modal-coment-color);
+    @include font(12px, inherit, 14px, 0.01em, var(--modal-coment-color));
   }
 }
 
 .checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
 
   cursor: pointer;
 
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, 400, 24px, 0.03em, inherit);
 
   &__icon {
     position: relative;
@@ -141,9 +128,8 @@
 
   &__link {
     text-decoration-skip-ink: none;
-    font-size: 14px;
-    line-height: 1.71;
-    color: var(--accent-color);
+
+    @include font(14px, 400, 24px, 0.03em, var(--accent-color));
   }
 }
 
@@ -158,9 +144,7 @@
 
 .data-modal-close {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
   top: 8px;
   right: 8px;
 

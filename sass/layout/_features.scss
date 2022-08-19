@@ -4,9 +4,7 @@
   }
 
   &__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
 
     width: 270px;
     height: 120px;
@@ -20,17 +18,12 @@
   &__title {
     margin-bottom: 10px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font(14px, 700, 16px, 1.14, var(--bold-color));
     text-transform: uppercase;
-
-    color: var(--bold-color);
   }
 
   &__text {
-    font-size: 14px;
-    line-height: 1.71;
+    @include font(14px, 400, 24px, 1.71, inherit);
   }
 }
 

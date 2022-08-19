@@ -1,6 +1,5 @@
 .page-header .container {
-  display: flex;
-  align-items: center;
+  @extend %flex-center;
   border-bottom: 1px solid var(--header-bottom-border-color);
 }
 
@@ -19,8 +18,7 @@
 
   padding: 32px 0;
 
-  @include font(14px, 500, 16px, var(--bold-color));
-  letter-spacing: 0.02em;
+  @include font(14px, 500, 16px, 0.02em, var(--bold-color));
 
   transition: color var(--speed-animation) var(--animation-type);
 
@@ -62,13 +60,11 @@
 }
 
 .contact__link {
-  display: inline-flex;
-  align-items: center;
+  @extend %flex-center;
 
   padding: 32px 0;
 
-  @include font(14px, 500, 16px, inherit);
-  letter-spacing: 0.02em;
+  @include font(14px, 500, 16px, 0.02em, inherit);
 
   transition: color var(--speed-animation) var(--animation-type);
 
