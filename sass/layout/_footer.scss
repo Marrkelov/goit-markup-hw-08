@@ -61,7 +61,7 @@
 }
 
 .form-contact__link {
-  @include font(14px, 400, 24px, 0.03, var(--white-color));
+  @include font(14px, 400, 24px, 0.03em, var(--white-color));
 
   transition: color var(--speed-animation) var(--animation-type);
 
@@ -72,7 +72,7 @@
 
   .cnt-mail &,
   .cnt-tel & {
-    @include font(14px, 400, 24px, 0.03, var(--footer-color-contact));
+    @include font(14px, 400, 24px, 0.03em, var(--footer-color-contact));
   }
 }
 

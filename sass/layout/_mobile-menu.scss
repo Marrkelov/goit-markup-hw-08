@@ -97,11 +97,11 @@
 
 .mobile-contact__link {
   &.tel {
-    @include font(34px, 500, 40px, 0.02, var(--accent-color));
+    @include font(34px, 500, 40px, 0.02em, var(--accent-color));
   }
 
   &.mail {
-    @include font(24px, 500, 28px, 0.02, var(--primary-color));
+    @include font(24px, 500, 28px, 0.02em, var(--primary-color));
   }
 }
 
@@ -110,7 +110,7 @@
   flex-wrap: wrap;
 
   &__link {
-    @include font(18px, 500, 22px, 0.02, var(--accent-color));
+    @include font(18px, 500, 22px, 0.02em, var(--accent-color));
   }
 
   &__border {

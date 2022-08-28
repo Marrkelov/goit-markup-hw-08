@@ -167,7 +167,7 @@ textarea {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.1785714286;
-  letter-spacing: 0.03;
+  letter-spacing: 0.03em;
   color: var(--bold-color);
 }
 @media screen and (min-width: 1200px) {
@@ -175,7 +175,7 @@ textarea {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1666666667;
-    letter-spacing: 0.03;
+    letter-spacing: 0.03em;
     color: var(--bold-color);
   }
 }
@@ -276,7 +276,7 @@ textarea {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.1428571429;
-  letter-spacing: 1.14;
+  letter-spacing: 1.14em;
   color: var(--white-color);
   text-transform: uppercase;
 }
@@ -503,14 +503,14 @@ textarea {
   font-size: 34px;
   font-weight: 500;
   line-height: 1.1764705882;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
   color: var(--accent-color);
 }
 .mobile-contact__link.mail {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.1666666667;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
   color: var(--primary-color);
 }
 
@@ -522,7 +522,7 @@ textarea {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.2222222222;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
   color: var(--accent-color);
 }
 .mobile-social__border {
@@ -789,7 +789,7 @@ body.modal-open {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.1428571429;
-  letter-spacing: 1.14;
+  letter-spacing: 1.14em;
   color: var(--bold-color);
   text-transform: uppercase;
 }
@@ -797,7 +797,7 @@ body.modal-open {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7142857143;
-  letter-spacing: 1.71;
+  letter-spacing: 1.71em;
   color: inherit;
 }
 
@@ -847,7 +847,7 @@ body.modal-open {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.1428571429;
-  letter-spacing: 1.14;
+  letter-spacing: 1.14em;
   color: var(--white-color);
   text-transform: uppercase;
   background-color: var(--doing-text-bg-cards);
@@ -905,7 +905,7 @@ body.modal-open {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.1875;
-  letter-spacing: 1.19;
+  letter-spacing: 1.19em;
   color: inherit;
 }
 
@@ -1010,7 +1010,7 @@ body.modal-open {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7142857143;
-  letter-spacing: 0.03;
+  letter-spacing: 0.03em;
   color: var(--white-color);
   transition: color var(--speed-animation) var(--animation-type);
 }
@@ -1021,7 +1021,7 @@ body.modal-open {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7142857143;
-  letter-spacing: 0.03;
+  letter-spacing: 0.03em;
   color: var(--footer-color-contact);
 }
 

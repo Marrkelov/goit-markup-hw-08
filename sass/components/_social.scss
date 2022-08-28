@@ -19,7 +19,7 @@
 
     margin-bottom: 20px;
 
-    @include font(14px, 700, 16px, 1.14, var(--white-color));
+    @include font(14px, 700, 16px, 1.14em, var(--white-color));
     text-transform: uppercase;
   }
 }

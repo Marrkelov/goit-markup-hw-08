@@ -1,9 +1,9 @@
 .title {
   text-align: center;
 
-  @include font(28px, 700, 33px, 0.03, var(--bold-color));
+  @include font(28px, 700, 33px, 0.03em, var(--bold-color));
 
   @media screen and (min-width: $desktop) {
-    @include font(36px, 700, 42px, 0.03, var(--bold-color));
+    @include font(36px, 700, 42px, 0.03em, var(--bold-color));
   }
 }
