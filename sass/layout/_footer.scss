@@ -21,19 +21,13 @@
   }
 
   &__block {
-    @media screen and (min-width: $desktop) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: start;
+    @media screen and (max-width: $to-desktop) {
+      margin-bottom: 60px;
     }
   }
 }
 
 .form-contact {
-  @media screen and (max-width: $to-desktop) {
-    margin-bottom: 60px;
-  }
-
   &__list {
     font-style: normal;
 

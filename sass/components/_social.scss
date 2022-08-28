@@ -1,26 +1,31 @@
 .social-container {
-  justify-content: center;
-  margin-bottom: 60px;
+  // justify-content: center;
+
+  @media screen and (max-width: $to-desktop) {
+    margin-bottom: 60px;
+  }
 
   @media screen and (min-width: $tablet) and (max-width: $to-desktop) {
     display: inline-block;
   }
 
   @media screen and (min-width: $desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: start;
     margin-left: 70px;
   }
 
   &__title {
-    display: flex;
-    justify-content: center;
-
     margin-bottom: 20px;
 
     @include font(14px, 700, 16px, 0.03em, var(--white-color));
     text-transform: uppercase;
+
+    @media screen and (max-width: $to-desktop) {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 

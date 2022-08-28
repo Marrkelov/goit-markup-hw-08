@@ -1,5 +1,9 @@
 .logo {
-  display: flex;
+  display: block;
+
+  @media screen and (max-width: $to-desktop) {
+    display: flex;
+  }
 
   font-family: var(--secondary-font);
 
