@@ -20,14 +20,18 @@
   &__title {
     @extend %flex-center;
 
+    @media screen and (min-width: $tablet) {
+      justify-content: start;
+    }
+
     margin-bottom: 10px;
 
-    @include font(14px, 700, 16px, 1.14em, var(--bold-color));
+    @include font(14px, 700, 16px, 0.03em, var(--bold-color));
     text-transform: uppercase;
   }
 
   &__text {
-    @include font(14px, 400, 24px, 1.71em, inherit);
+    @include font(14px, 400, 24px, 0.03em, inherit);
   }
 }
 

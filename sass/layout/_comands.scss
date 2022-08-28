@@ -51,6 +51,6 @@
 
     margin-bottom: 16px;
 
-    @include font(16px, 400, 19px, 1.19em, inherit);
+    @include font(16px, 400, 19px, 0.03em, inherit);
   }
 }
