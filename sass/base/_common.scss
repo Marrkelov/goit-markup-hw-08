@@ -1,8 +1,5 @@
 body {
   font-family: var(--primary-font);
-  font-weight: 400;
-  letter-spacing: 0.03em;
-
   color: var(--primary-color);
   background-color: var(--prymary-bg-color);
 }
@@ -26,6 +23,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {

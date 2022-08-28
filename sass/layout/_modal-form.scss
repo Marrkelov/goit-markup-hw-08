@@ -1,9 +1,25 @@
+body.modal-open {
+  overflow: hidden;
+}
+
 .modal {
+  position: absolute;
   @extend %position-center;
 
-  width: 528px;
-  height: 581px;
+  width: 94vw;
+
+  @media screen and (min-width: $mobile) {
+    width: 451px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+  }
+
+  height: auto;
   padding: 40px;
+  margin: 90px 15px;
+  margin: auto;
 
   border-radius: 4px;
 
@@ -16,12 +32,16 @@
   &__header {
     margin-bottom: 12px;
 
-    @include font(20px, 700, 23px, 0.03em, var(--bold-color));
+    @include font(20px, 700, 30px, 0.03em, var(--bold-color));
+
+    @media screen and (min-width: $desktop) {
+      @include font(20px, 700, 23px, 0.03em, var(--bold-color));
+    }
   }
 }
 
 .input-fields {
-  width: 448px;
+  width: 100%;
 }
 
 .forms-input {
@@ -101,13 +121,17 @@
 
   cursor: pointer;
 
-  @include font(14px, 400, 24px, 0.03em, inherit);
+  @include font(12px, 400, 14px, 0.03em, inherit);
+
+  @media screen and (min-width: $desktop) {
+    @include font(14px, 400, 24px, 0.03em, inherit);
+  }
 
   &__icon {
     position: relative;
 
     width: 16px;
-    height: 16px;
+    height: 15px;
     margin-right: 8px;
 
     border: 2px solid var(--bold-color);
@@ -129,7 +153,11 @@
   &__link {
     text-decoration-skip-ink: none;
 
-    @include font(14px, 400, 24px, 0.03em, var(--accent-color));
+    @include font(12px, 400, 14px, 0.03em, var(--accent-color));
+
+    @media screen and (min-width: $desktop) {
+      @include font(14px, 400, 24px, 0.03em, var(--accent-color));
+    }
   }
 }
 

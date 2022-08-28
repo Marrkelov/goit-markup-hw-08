@@ -9,6 +9,7 @@
   visibility: visible;
   opacity: 1;
   background-color: var(--modal-backdrop);
+  overflow-y: scroll;
 
   transition: opacity var(--speed-animation) var(--animation-type),
     visibility var(--speed-animation) var(--animation-type);

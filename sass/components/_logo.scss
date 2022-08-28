@@ -1,25 +1,44 @@
 .logo {
-  display: block;
-
-  margin-right: 93px;
-  padding: 24px 0;
+  display: flex;
 
   font-family: var(--secondary-font);
+
+  @media screen and (max-width: $to-tablet) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $to-desktop) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 
   &__web {
     color: var(--accent-color);
   }
 
   &--theme-white {
-    @include font(26px, 700, 31px, 0.03em, var(--primari-logo-color));
+    @include font(24px, 700, 28px, 0.03em, var(--primari-logo-color));
+
+    @media (min-width: $desktop) {
+      @include font(26px, 700, 31px, 0.03em, var(--primari-logo-color));
+    }
   }
 
   &--theme-dark {
-    @include font(26px, 700, 31px, 0.03em, var(--white-color));
-  }
-
-  .basement & {
-    margin: 0 0 20px 0;
+    justify-content: center;
+    margin-bottom: 20px;
     padding: 0;
+
+    @include font(24px, 700, 28px, 0.03em, var(--white-color));
+
+    @media (min-width: $desktop) {
+      @include font(26px, 700, 31px, 0.03em, var(--white-color));
+    }
   }
 }

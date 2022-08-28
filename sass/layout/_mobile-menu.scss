@@ -1,0 +1,122 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+
+  background-color: var(--white-color);
+
+  transform: translateX(100%);
+
+  transition: transform var(--speed-animation) var(--animation-type);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  height: 100vh;
+
+  padding: 48px 40px;
+}
+
+.menu-toggle {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  height: 40px;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background-color: transparent;
+
+  color: var(--bold-color);
+
+  transition: fill var(--speed-animation) var(--animation-type);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &--close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.mobile-menu {
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    @include font(40px, 500, 47px, 0.02em, var(--bold-color));
+
+    transition: color var(--speed-animation) var(--animation-type);
+  }
+
+  &__link--current {
+    color: var(--accent-color);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-contact {
+  margin-bottom: 64px;
+}
+
+.mobile-contact__item {
+  &.tel {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-contact__link {
+  &.tel {
+    @include font(34px, 500, 40px, 0.02, var(--accent-color));
+  }
+
+  &.mail {
+    @include font(24px, 500, 28px, 0.02, var(--primary-color));
+  }
+}
+
+.mobile-social {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__link {
+    @include font(18px, 500, 22px, 0.02, var(--accent-color));
+  }
+
+  &__border {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0.1px solid var(--modal-border-color);
+    transform: rotate(90deg);
+  }
+}

@@ -1,12 +1,24 @@
 .portfolio {
   &__menu {
-    @extend %flex-center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    row-gap: 15px;
 
-    margin-bottom: 56px;
-  }
+    @media screen and (max-width: $to-tablet) {
+      margin-bottom: 40px;
+    }
 
-  &__item:not(:last-child) {
-    margin-right: 8px;
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+    }
   }
 
   &__btn {
@@ -37,25 +49,27 @@
 
 .cards {
   display: flex;
-
   flex-wrap: wrap;
 
+  gap: 30px;
+
+  background: var(--prymary-bg-color);
+
   &__item {
-    width: calc((100% - 60px) / 3);
+    @media screen and (min-width: $tablet) and (max-width: $to-desktop) {
+      max-width: 354px;
+    }
 
-    background: var(--prymary-bg-color);
-  }
-
-  &__item:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-
-  &__item:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 60px) / 3);
+    }
   }
 
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
 
     transition: box-shadow var(--speed-animation) var(--animation-type);
   }
@@ -74,7 +88,7 @@
 
   &__text {
     position: absolute;
-    top: 1px;
+    top: 0px;
 
     width: 100%;
     height: 100%;
@@ -95,6 +109,8 @@
 
   &__data {
     padding: 20px 24px;
+
+    flex-grow: 1;
 
     border: 1px solid var(--cards-bg-color);
     border-top: none;

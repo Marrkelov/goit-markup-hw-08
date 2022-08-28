@@ -7,20 +7,31 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
-}
 
-.commands__item {
-  width: calc((100% - 90px) / 4);
+  &__item {
+    @media screen and (min-width: $tablet) and (max-width: $to-desktop) {
+      width: calc((100% - 30px) / 2);
+    }
 
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 90px) / 4);
+    }
 
-  background-color: var(--prymary-bg-color);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  &:not(:last-child) {
-    margin-right: 30px;
+    background-color: var(--prymary-bg-color);
   }
 }
 

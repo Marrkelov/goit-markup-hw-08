@@ -20,7 +20,7 @@
   <body>
     <!-- PAGE-HEADER -->
     <header class="page-header">
-      <div class="container">
+      <div class="container page-header__container">
         <a class="logo logo--theme-white link" lang="en" href="./index.html"
           ><span class="logo__web">Web</span>Studio
         </a>
@@ -60,6 +60,97 @@
             >
           </li>
         </ul>
+        <button class="menu-toggle menu-toggle--open js-open-menu">
+          <svg class="menu-toggle__icon" width="40px" height="40px">
+            <use href="./images/icons.svg#menu-mobile-burger"></use>
+          </svg>
+        </button>
+        <!-- MOBILE MENU -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <div class="container mobile-menu-container">
+            <button class="menu-toggle menu-toggle--close js-close-menu">
+              <svg class="menu-toggle__icon" width="40px" height="40px">
+                <use href="./images/icons.svg#menu-mobile-close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu list">
+              <li class="mobile-menu__item">
+                <a
+                  class="mobile-menu__link mobile-menu__link--current link"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <div>
+              <ul class="mobile-contact list">
+                <li class="mobile-contact__item tel">
+                  <a
+                    class="mobile-contact__link tel link"
+                    href="tel:+380961111111"
+                  >
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mobile-contact__item mail">
+                  <a
+                    class="mobile-contact__link mail link"
+                    href="mailto:info@devstudio.com"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mobile-social list">
+                <li class="mobile-social__item">
+                  <a
+                    class="mobile-social__link mobile-social__link--menu-mobile link"
+                    href="http://www.instagram.com"
+                    target="_blank"
+                    rel="noopener nofollow"
+                    >Instagram <span class="mobile-social__border"></span
+                  ></a>
+                </li>
+                <li class="mobile-social__item">
+                  <a
+                    class="mobile-social__link mobile-social__link--menu-mobile link"
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener nofollow"
+                    >Twitter <span class="mobile-social__border"></span
+                  ></a>
+                </li>
+                <li class="mobile-social__item">
+                  <a
+                    class="mobile-social__link mobile-social__link--menu-mobile link"
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener nofollow"
+                    >Facebook <span class="mobile-social__border"></span
+                  ></a>
+                </li>
+                <li class="mobile-social__item">
+                  <a
+                    class="mobile-social__link mobile-social__link--menu-mobile link"
+                    href="https://ua.linkedin.com"
+                    target="_blank"
+                    rel="noopener nofollow"
+                  >
+                    Linkedin</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -67,7 +158,8 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title title">
-            Эффективные решения для вашего бизнеса
+            Эффективные решения <br />
+            для вашего бизнеса
           </h1>
           <button class="hero__btn btn" type="button" data-modal-open>
             Заказать услугу
@@ -216,33 +308,84 @@
           <h2 class="doing__title title">Чем мы занимаемся</h2>
           <ul class="doing__list list">
             <li class="doing__item">
-              <img
-                class="doing__image"
-                src="./images/doing/coding.jpg"
-                alt="Бэкенд"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/doing/coding.webp    1x,
+                    ./images/doing/coding@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/doing/coding.jpg    1x,
+                    ./images/doing/coding@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="doing__image"
+                  src="./images/doing/coding.jpg"
+                  alt="Бэкенд"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="doing__text">Десктопные приложения</p>
             </li>
             <li class="doing__item">
-              <img
-                class="doing__image"
-                src="./images/doing/phone.jpg"
-                alt="Фронтент"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/doing/phone.webp    1x,
+                    ./images/doing/phone@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/doing/phone.jpg    1x,
+                    ./images/doing/phone@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="doing__image"
+                  src="./images/doing/phone.jpg"
+                  alt="Фронтент"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="doing__text">Мобильные приложения</p>
             </li>
             <li class="doing__item">
-              <img
-                class="doing__image"
-                src="./images/doing/palette.jpg"
-                alt="Дизайн"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/doing/palette.webp    1x,
+                    ./images/doing/palette@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/doing/palette.jpg    1x,
+                    ./images/doing/palette@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="doing__image"
+                  src="./images/doing/palette.jpg"
+                  alt="Дизайн"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="doing__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -254,13 +397,59 @@
           <h2 class="commands__title title">Наша команда</h2>
           <ul class="commands__list list">
             <li class="commands__item">
-              <img
-                class="commands__images"
-                src="./images/commands/igor.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/commands/igor-desktop.webp    1x,
+                    ./images/commands/igor-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/igor-desktop.jpg    1x,
+                    ./images/commands/igor-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/commands/igor-tablet.webp    1x,
+                    ./images/commands/igor-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/igor-tablet.jpg    1x,
+                    ./images/commands/igor-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/commands/igor-mobile.webp    1x,
+                    ./images/commands/igor-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/igor-mobile.jpg    1x,
+                    ./images/commands/igor-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="commands__images"
+                  src="./images/commands/igor-mobile.jpg"
+                  alt="Игорь Демьяненко"
+                  width="100%"
+                />
+              </picture>
               <div class="employee-data">
                 <h3 class="employee-data__name">Игорь Демьяненко</h3>
                 <p lang="en" class="employee-data__position">
@@ -337,12 +526,60 @@
               </div>
             </li>
             <li class="commands__item">
-              <img
-                src="./images/commands/olga.jpg"
-                alt="Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/commands/olga-desktop.webp    1x,
+                    ./images/commands/olga-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/olga-desktop.jpg    1x,
+                    ./images/commands/olga-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/commands/olga-tablet.webp    1x,
+                    ./images/commands/olga-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/olga-tablet.jpg    1x,
+                    ./images/commands/olga-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/commands/olga-mobile.webp    1x,
+                    ./images/commands/olga-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/olga-mobile.jpg    1x,
+                    ./images/commands/olga-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="commands__images"
+                  src="./images/commands/olga-mobile.jpg"
+                  alt="Ольга Репина"
+                  width="100%"
+                />
+              </picture>
+
               <div class="employee-data">
                 <h3 class="employee-data__name">Ольга Репина</h3>
                 <p lang="en" class="employee-data__position">
@@ -418,14 +655,61 @@
                 </ul>
               </div>
             </li>
+
             <li class="commands__item">
-              <img
-                class="commands__images"
-                src="./images/commands/nikolay.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/commands/nikolay-desktop.webp    1x,
+                    ./images/commands/nikolay-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/nikolay-desktop.jpg    1x,
+                    ./images/commands/nikolay-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/commands/nikolay-tablet.webp    1x,
+                    ./images/commands/nikolay-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/nikolay-tablet.jpg    1x,
+                    ./images/commands/nikolay-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/commands/nikolay-mobile.webp    1x,
+                    ./images/commands/nikolay-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/nikolay-mobile.jpg    1x,
+                    ./images/commands/nikolay-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="commands__images"
+                  src="./images/commands/nikolay-mobile.jpg"
+                  alt="Николай Тарасов"
+                  width="100%"
+                />
+              </picture>
               <div class="employee-data">
                 <h3 class="employee-data__name">Николай Тарасов</h3>
                 <p lang="en" class="employee-data__position">Marketing</p>
@@ -500,13 +784,60 @@
               </div>
             </li>
             <li class="commands__item">
-              <img
-                class="commands__images"
-                src="./images/commands/mihail.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/commands/michail-desktop.webp    1x,
+                    ./images/commands/michail-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/michail-desktop.jpg    1x,
+                    ./images/commands/michail-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/commands/michail-tablet.webp    1x,
+                    ./images/commands/michail-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/michail-tablet.jpg    1x,
+                    ./images/commands/michail-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/commands/michail-mobile.webp    1x,
+                    ./images/commands/michail-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/commands/michail-mobile.jpg    1x,
+                    ./images/commands/michail-mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="commands__images"
+                  src="./images/commands/michail-mobile.jpg"
+                  alt="Михаил Ермаков"
+                  width="100%"
+                />
+              </picture>
+
               <div class="employee-data">
                 <h3 class="employee-data__name">Михаил Ермаков</h3>
                 <p lang="en" class="employee-data__position">UI Designer</p>
@@ -637,7 +968,7 @@
     <!-- PAGE-FOOTER -->
     <footer class="page-footer">
       <div class="container">
-        <div>
+        <div class="page-footer__block">
           <a class="logo logo--theme-dark link" lang="en" href="./index.html">
             <span class="logo__web">Web</span>Studio
           </a>
@@ -758,6 +1089,7 @@
         </div>
       </div>
     </footer>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
